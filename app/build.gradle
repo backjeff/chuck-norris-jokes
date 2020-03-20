@@ -1,0 +1,17 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: "$rootProject.projectDir/android-common.gradle"
+
+dependencies {
+//    implementation project(':di')
+//    implementation project(':intent')
+
+    appDependencies.each { add(it.configuration, it.dependency, it.options) }
+}
+
+androidExtensions {
+    experimental = true
+}
+
