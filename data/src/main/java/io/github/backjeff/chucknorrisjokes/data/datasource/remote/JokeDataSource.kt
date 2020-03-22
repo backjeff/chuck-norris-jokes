@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 interface JokeDataSource {
     fun getRandomJoke(categoryId: Int?): Flow<Joke>
     fun getCategories(): Flow<List<JokeCategory>>
-    fun search(query: String?): Flow<List<Joke>>
+    fun search(query: String): Flow<List<Joke>>
 }

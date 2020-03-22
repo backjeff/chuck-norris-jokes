@@ -21,7 +21,7 @@ class JokeRepositoryImpl(
         )
     }
 
-    override fun search(query: String?) = flow {
+    override fun search(query: String) = flow {
         emit(
             jokeDataSource.search(query).single()
         )
