@@ -15,7 +15,7 @@ import org.jetbrains.anko.toast
 
 fun Fragment.getFont(fontId: Int) = ResourcesCompat.getFont(requireContext(), fontId)
 fun Fragment.getColor(@ColorRes colorId: Int) = ContextCompat.getColor(requireContext(), colorId)
-fun Fragment.getDrawable(@ColorRes drawableId: Int) = ContextCompat.getColor(requireContext(), drawableId)
+fun Fragment.getDrawable(@DrawableRes drawableId: Int) = ContextCompat.getDrawable(requireContext(), drawableId)
 fun Fragment.toast(message: String) = requireContext().toast(message).show()
 
 fun Fragment.hideActionBar() = (activity as? AppCompatActivity)?.supportActionBar?.hide()

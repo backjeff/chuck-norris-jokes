@@ -4,5 +4,7 @@
     <color name="colorPrimary">#00629F</color>
     <color name="colorAccent">#00CCC2</color>
     <color name="colorPrimaryDark">#003366</color>
+    <color name="blackOverlay">#66000000</color>
+    <color name="statusBarColor">#80DFF7</color>
 
 </resources>
