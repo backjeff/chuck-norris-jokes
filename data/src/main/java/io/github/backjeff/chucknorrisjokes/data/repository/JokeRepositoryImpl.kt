@@ -9,7 +9,7 @@ class JokeRepositoryImpl(
     private val jokeDataSource: JokeDataSource
 ): JokeRepository {
 
-    override fun getRandomJoke(categoryId: Int?) = flow {
+    override fun getRandomJoke(categoryId: String?) = flow {
         emit(
             jokeDataSource.getRandomJoke(categoryId).single()
         )

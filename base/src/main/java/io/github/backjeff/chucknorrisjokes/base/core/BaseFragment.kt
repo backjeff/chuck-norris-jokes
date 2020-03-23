@@ -47,7 +47,7 @@ abstract class BaseFragment : Fragment(), ViewStateListener, KoinComponent {
             (requireActivity() as? AppCompatActivity)?.apply {
                 setSupportActionBar(it)
                 setupActionBarWithNavController(requireView().findNavController())
-                setNavigationIcon(R.drawable.ic_arrow_back_black_24dp)
+                setNavigationIcon(R.drawable.ic_back_arrow)
             }
         }
     }

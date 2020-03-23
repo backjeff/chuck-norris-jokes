@@ -11,13 +11,10 @@ class GetRandomJoke(
     private val jokeRepository: JokeRepository
 ) : UseCase<Joke, GetRandomJoke.Params>(scope) {
 
-    override fun run(params: Params?) = when {
-        params == null -> throw MissingParamsException()
-        else -> jokeRepository.getRandomJoke(params.categoryId)
-    }
+    override fun run(params: Params?) = jokeRepository.getRandomJoke(params?.categoryId)
 
     data class Params(
-        val categoryId: Int?
+        val categoryId: String?
     )
 
 }

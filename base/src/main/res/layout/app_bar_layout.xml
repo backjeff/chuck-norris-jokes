@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="@android:color/transparent"
         app:elevation="0dp"
         app:liftOnScroll="true">
 
@@ -12,9 +13,9 @@
             android:id="@+id/appToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:minHeight="?android:actionBarSize"
-            app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+            android:background="@android:color/transparent"
+            android:minHeight="@dimen/toolbar_height"
+            app:navigationIcon="@drawable/ic_back_arrow"
             app:titleTextColor="@color/colorPrimary" />
 
 </com.google.android.material.appbar.AppBarLayout>

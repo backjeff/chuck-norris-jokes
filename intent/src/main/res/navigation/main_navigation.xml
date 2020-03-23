@@ -8,6 +8,23 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="io.github.backjeff.chucknorrisjokes.feature_random_joke.splash.SplashFragment"
-        android:label="SplashFragment" />
+        android:label="@string/fragment_no_title">
+        <action
+            android:id="@+id/action_splashFragment_to_randomJokeFragment"
+            app:destination="@id/randomJokeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/randomJokeFragment"
+        android:name="io.github.backjeff.chucknorrisjokes.feature_random_joke.random_joke.RandomJokeFragment"
+        android:label="@string/fragment_no_title" >
+        <action
+            android:id="@+id/action_randomJokeFragment_to_jokeCategoryFragment"
+            app:destination="@id/jokeCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokeCategoryFragment"
+        android:name="io.github.backjeff.chucknorrisjokes.feature_random_joke.category.JokeCategoryFragment"
+        android:label="@string/fragment_no_title" />
 
 </navigation>
