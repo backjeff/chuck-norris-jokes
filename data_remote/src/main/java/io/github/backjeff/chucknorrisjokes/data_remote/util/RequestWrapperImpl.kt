@@ -18,7 +18,7 @@ class RequestWrapperImpl : RequestWrapper, KoinComponent {
         return try {
             call()
         } catch (httpException: HttpException) {
-            return handleHttpException(httpException, call)
+            return handleHttpException(httpException)
         } catch (ioException: IOException) {
             throw ServerError()
         } catch (stateException: IllegalStateException) {
@@ -28,8 +28,7 @@ class RequestWrapperImpl : RequestWrapper, KoinComponent {
 
     @Synchronized
     private suspend fun <D> handleHttpException(
-        httpException: HttpException,
-        call: suspend () -> D
+        httpException: HttpException
     ): D = throw httpException.parseError()
 
     private fun HttpException.parseError() =

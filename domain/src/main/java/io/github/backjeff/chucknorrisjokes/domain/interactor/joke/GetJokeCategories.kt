@@ -11,9 +11,6 @@ class GetJokeCategories(
     private val jokeRepository: JokeRepository
 ) : UseCase<List<JokeCategory>, Unit>(scope) {
 
-    override fun run(params: Unit?) = when {
-        params == null -> throw MissingParamsException()
-        else -> jokeRepository.getCategories()
-    }
+    override fun run(params: Unit?) = jokeRepository.getCategories()
 
 }

@@ -15,7 +15,7 @@ data class JokeDataSourceImpl(
 
     private val requestWrapper: RequestWrapper by inject()
 
-    override fun getRandomJoke(categoryId: Int?) = flow {
+    override fun getRandomJoke(categoryId: String?) = flow {
         emit(
             JokeMapper.toDomain(
                 requestWrapper.wrapperGenericResponse {

@@ -7,19 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".splash.SplashFragment">
 
-    <ImageView
-        android:id="@+id/splashScreenBackground"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:alpha="0.5"
-        android:src="@drawable/default_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/default_background_layout" />
 
-    <ImageView
+    <io.github.backjeff.chucknorrisjokes.base.customview.Logo
         android:id="@+id/splashScreenLogo"
         android:layout_width="260dp"
         android:layout_height="260dp"
