@@ -1,10 +1,12 @@
 apply from: 'libs.gradle'
 apply from: 'dependencies.gradle'
+apply plugin: 'org.sonarqube'
 
 buildscript {
     ext {
         kotlin_version = '1.3.61'
         kotlinVersion = '1.3.61'
+        sonarqubeVersion = '2.8'
     }
 
     repositories {
@@ -12,9 +14,28 @@ buildscript {
         jcenter()
         
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$sonarqubeVersion"
+    }
+
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Chuck Norris Jokes"
+        property "sonar.projectKey", "io.github.backjeff.chucknorrisjokes"
+        property "sonar.tests", ["src/test/java"]
+        property "sonar.test.inclusions", "**/*Test*/**"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.sources", "src/main/java"
+        property "sonar.exclusions", '**/*Test*/**,' +
+                '*.json,' +
+                '**/*test*/**,' +
+                '**/.gradle/**,' +
+                '**/R.class'
     }
 }
 
