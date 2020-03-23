@@ -34,7 +34,7 @@ open class BaseDialogFragment : DialogFragment(), LifecycleObserver {
             isLoading = true
             try {
                 super.show(manager, tag)
-            } catch (e: Exception) { }
+            } catch (e: Exception) { /* Ignored */ }
         }
     }
 

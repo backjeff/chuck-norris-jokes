@@ -15,7 +15,7 @@ class ViewState<T>(
             Status.SUCCESS -> data?.let { onSuccess(it) } ?: throw RuntimeException()
             Status.ERROR -> error?.let { onError(it) } ?: throw RuntimeException()
             Status.LOADING -> loading()
-            else -> { }
+            Status.NEUTRAL -> Unit
         }
     }
 

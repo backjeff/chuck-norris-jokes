@@ -27,9 +27,17 @@ abstract class BaseFragment : Fragment(), ViewStateListener, KoinComponent {
     private val loadingDialogFragment = LoadingDialog()
     private var alertDialog: AlertDialog? = null
 
-    open fun addObservers(owner: LifecycleOwner) {}
+    open fun addObservers(owner: LifecycleOwner) {
+        /*
+            This function should be overrided by fragments
+        */
+    }
 
-    open fun setupView() {}
+    open fun setupView() {
+        /*
+            This function should be overrided by fragments
+        */
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
