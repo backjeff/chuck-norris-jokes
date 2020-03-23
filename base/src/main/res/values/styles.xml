@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="ChuckNorrisJokes.Toolbar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textSize">19sp</item>
+        <item name="android:fontFamily">@font/pixelmix_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:titleTextColor">@color/colorBlack</item>
+    </style>
+
     <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
         <item name="android:windowNoTitle">true</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -59,7 +66,6 @@
 
     <style name="ChuckNorrisJokes.Text.Text" parent="ChuckNorrisJokes.Text">
         <item name="android:lineSpacingExtra">12sp</item>
-
     </style>
 
 </resources>

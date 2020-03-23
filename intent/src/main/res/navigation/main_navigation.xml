@@ -22,9 +22,10 @@
             android:id="@+id/action_randomJokeFragment_to_jokeCategoryFragment"
             app:destination="@id/jokeCategoryFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/jokeCategoryFragment"
         android:name="io.github.backjeff.chucknorrisjokes.feature_random_joke.category.JokeCategoryFragment"
-        android:label="@string/fragment_no_title" />
+        android:label="@string/fragment_joke_category" />
 
 </navigation>

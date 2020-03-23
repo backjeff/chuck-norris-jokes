@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="fragment_no_title">" "</string>
+    <string name="fragment_joke_category">Categories</string>
     <string name="default_dialog_title">Attention</string>
 </resources>
