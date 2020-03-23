@@ -42,7 +42,6 @@ class RandomJokeViewModel(app: Application) : BaseRandomJokeViewModel(app), Koin
     fun blink() = _blinkViewState.postSuccess(Unit)
 
     fun clearStates() {
-        _randomJokeViewState.postNeutral()
         _blinkViewState.postNeutral()
     }
 
