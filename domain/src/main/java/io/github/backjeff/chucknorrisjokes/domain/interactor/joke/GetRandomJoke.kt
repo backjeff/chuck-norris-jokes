@@ -1,7 +1,6 @@
 package io.github.backjeff.chucknorrisjokes.domain.interactor.joke
 
 import io.github.backjeff.chucknorrisjokes.domain.core.UseCase
-import io.github.backjeff.chucknorrisjokes.domain.exception.MissingParamsException
 import io.github.backjeff.chucknorrisjokes.domain.model.Joke
 import io.github.backjeff.chucknorrisjokes.domain.repository.JokeRepository
 import kotlinx.coroutines.CoroutineScope
@@ -14,7 +13,7 @@ class GetRandomJoke(
     override fun run(params: Params?) = jokeRepository.getRandomJoke(params?.categoryId)
 
     data class Params(
-        val categoryId: String?
+        val categoryId: String? = ""
     )
 
 }
