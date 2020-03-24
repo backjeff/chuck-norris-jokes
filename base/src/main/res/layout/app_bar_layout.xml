@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:minHeight="@dimen/toolbar_height"
+        android:paddingEnd="16dp"
         app:navigationIcon="@drawable/ic_back_arrow"
         app:titleTextColor="@color/colorBlack"/>
 

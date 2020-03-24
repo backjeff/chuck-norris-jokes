@@ -12,14 +12,12 @@ class RandomJokeViewModel(app: Application) : BaseRandomJokeViewModel(app), Koin
     private val _randomJokeViewState by viewState<Joke>()
     val randomJokeViewState = _randomJokeViewState.asLiveData()
 
-    private val _blinkViewState by viewState<Unit>()
+    private val _blinkViewState by viewState<Boolean>()
     val blinkViewState = _blinkViewState.asLiveData()
 
     private val getRandomJoke: GetRandomJoke by useCase()
 
-    init {
-        requestRandomJoke()
-    }
+    init { }
 
     fun getJokeCategoryText() = selectedCategory
 
@@ -39,9 +37,10 @@ class RandomJokeViewModel(app: Application) : BaseRandomJokeViewModel(app), Koin
         )
     }
 
-    fun blink() = _blinkViewState.postSuccess(Unit)
+    fun blink() = _blinkViewState.postSuccess(soundConfig ?: true)
 
-    fun clearStates() {
+    override fun clearStates() {
+        super.clearStates()
         _blinkViewState.postNeutral()
     }
 

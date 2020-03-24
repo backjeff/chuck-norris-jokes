@@ -1,10 +1,10 @@
 package io.github.backjeff.chucknorrisjokes.feature_random_joke
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import io.github.backjeff.chucknorrisjokes.base.core.BaseViewModel
 import org.koin.core.KoinComponent
 
-open class BaseRandomJokeViewModel(app: Application) : AndroidViewModel(app), KoinComponent {
+open class BaseRandomJokeViewModel(app: Application) : BaseViewModel(app), KoinComponent {
 
     companion object {
         var selectedCategory: String? = null

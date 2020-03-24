@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.findNavController
@@ -58,6 +59,19 @@ abstract class BaseFragment : Fragment(), ViewStateListener, KoinComponent {
                 setNavigationIcon(R.drawable.ic_back_arrow)
             }
         }
+    }
+
+    fun getMenuItem(index: Int): MenuItem? {
+        toolbar = requireView().findOptional<Toolbar>(R.id.appToolbar)?.also {
+            (requireActivity() as? AppCompatActivity)?.apply {
+                return try {
+                    it.menu[index]
+                } catch (e: Exception) {
+                    null
+                }
+            }
+        }
+        return null
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

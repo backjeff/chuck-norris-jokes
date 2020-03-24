@@ -1,7 +1,6 @@
 package io.github.backjeff.chucknorrisjokes.feature_random_joke.category
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,11 +36,9 @@ class JokeCategoryFragment: BaseFragment() {
             onSuccess = { list ->
                 jokeCategoryList.addItems(list.map { it.value }) {
                     viewModel.selectCategory(list[it].value)
-                    Log.i("chuck", list[it].value)
                 }
             },
             onError = {
-                Log.i("chuck", "${it.message}")
                 toast(it.message ?: "")
             }
         )

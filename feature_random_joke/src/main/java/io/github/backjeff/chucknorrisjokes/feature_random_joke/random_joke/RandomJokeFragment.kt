@@ -1,10 +1,7 @@
 package io.github.backjeff.chucknorrisjokes.feature_random_joke.random_joke
 
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.lifecycle.LifecycleOwner
 import io.github.backjeff.chucknorrisjokes.base.core.BaseFragment
 import io.github.backjeff.chucknorrisjokes.base.extensions.*
@@ -21,14 +18,16 @@ class RandomJokeFragment: BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.random_joke_fragment, container, false)
     }
 
     override fun setupView() {
         setNavigationIcon(null)
 
+        viewModel.getSoundConfig()
+
         viewModel.getJokeCategoryText()?.run {
-            viewModel.requestRandomJoke()
             updateCategoryText(true)
         }
 
@@ -61,7 +60,7 @@ class RandomJokeFragment: BaseFragment() {
         viewModel.blinkViewState.onPostValue(
             lifecycleOwner = owner,
             onSuccess = {
-                randomJokeLogo.blink()
+                randomJokeLogo.blink(it)
             }
         )
         viewModel.randomJokeViewState.onPostValue(
@@ -70,16 +69,54 @@ class RandomJokeFragment: BaseFragment() {
                 randomJokeText.text = it.value
             },
             onError = {
-                Log.i("chuck", "${it.message}")
                 toast(it.message ?: "")
             }
         )
+        viewModel.soundConfigState.onPostValue(
+            lifecycleOwner = owner,
+            onSuccess = {
+                viewModel.requestRandomJoke()
+                handleSoundState(it)
+            }
+        )
+        viewModel.toggleSoundConfigState.onPostValue(
+            lifecycleOwner = owner,
+            onSuccess = { enabled ->
+                handleSoundState(enabled)
+            }
+        )
+    }
+
+    private fun handleSoundState(enabled: Boolean) {
+        if (enabled) {
+            setSoundIcon(R.drawable.ic_sound_on)
+        } else {
+            setSoundIcon(R.drawable.ic_sound_off)
+        }
+        randomJokeLogo.setOnClickListener { randomJokeLogo.blink(enabled) }
+    }
+
+    private fun setSoundIcon(drawableId: Int) {
+        getMenuItem(0)?.icon = getDrawable(drawableId)
     }
 
     private fun updateCategoryText(closeState: Boolean) {
         val categoryText = viewModel.getJokeCategoryText() ?: "Choose a category"
         randomJokeCategoryButton.text = categoryText.capitalize()
         randomJokeCategoryButton.closeState = closeState
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.random_joke_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_sound -> {
+            viewModel.toggleSound()
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 
     override fun onStop() {

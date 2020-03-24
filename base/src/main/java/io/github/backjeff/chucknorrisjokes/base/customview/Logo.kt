@@ -22,22 +22,26 @@ class Logo @JvmOverloads constructor(
         setImageResource(R.drawable.logo)
     }
 
-    fun blink(action: () -> Unit = {}) {
+    fun blink(sound: Boolean = true, action: () -> Unit = {}) {
         CoroutineScope(Dispatchers.IO).launch() {
             delay(500)
             setImageResource(R.drawable.logo_blink)
-            blinkSound.start()
+            playSound(sound)
             delay(100)
             setImageResource(R.drawable.logo)
-            delay(500)
+            delay(400)
             setImageResource(R.drawable.logo_blink)
-            blinkSound.start()
+            playSound(sound)
             delay(100)
             setImageResource(R.drawable.logo)
             delay(1000)
             action()
         }
 
+    }
+
+    private fun playSound(sound: Boolean) {
+        if (sound) blinkSound.start()
     }
 
 }
