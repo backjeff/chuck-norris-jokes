@@ -1,5 +1,7 @@
 apply from: 'libs.gradle'
+apply from: 'testLibs.gradle'
 apply from: 'dependencies.gradle'
+apply from: 'testDependencies.gradle'
 apply plugin: 'org.sonarqube'
 
 buildscript {

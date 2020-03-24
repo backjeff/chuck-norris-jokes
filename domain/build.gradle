@@ -2,6 +2,7 @@ apply plugin: 'kotlin'
 
 dependencies {
     domainDependencies.each { add(it.configuration, it.dependency, it.options) }
+    testDomainDependencies.each { add(it.configuration, it.dependency, it.options) }
 }
 
 compileKotlin {
