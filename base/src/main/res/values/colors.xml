@@ -7,6 +7,7 @@
     <color name="blackOverlay">#66000000</color>
     <color name="colorBlack">#231F20</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteTranslucid">#AAFFFFFF</color>
     <color name="statusBarColor">#80DFF7</color>
 
 </resources>
