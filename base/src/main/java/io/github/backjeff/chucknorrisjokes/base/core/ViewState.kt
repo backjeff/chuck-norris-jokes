@@ -28,4 +28,5 @@ class ViewState<T>(
 fun <T> ViewState<T>?.isSuccess() = this?.status?.equals(ViewState.Status.SUCCESS) ?: false
 fun <T> ViewState<T>?.isError() = this?.status?.equals(ViewState.Status.ERROR) ?: false
 fun <T> ViewState<T>?.isLoading() = this?.status?.equals(ViewState.Status.LOADING) ?: false
+fun <T> ViewState<T>?.isNeutral() = this?.status?.equals(ViewState.Status.NEUTRAL) ?: false
 
