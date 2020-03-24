@@ -9,9 +9,12 @@ ext {
     androidTestRulesVersion   = "1.1.0"
     androidTestVersion        = "1.2.0"
     coreTestVersion           = "2.0.0"
-    mockkVersion              = "1.9.2"
+    mockkVersion              = "1.9.3"
     androidJunitVersion       = "1.1.0"
     androidCoreTestVersion    = "1.2.0"
+
+    androidxTestEspressoVersion    = "3.1.0"
+    fragmentVersion    = "1.1.0"
 
     //androidTestImplementation libs
     androidTestRules          = "androidx.test:rules:$androidTestRulesVersion"
@@ -22,6 +25,11 @@ ext {
     androidJunitRunner        = "de.mannodermaus.junit5:android-test-runner:$androidJunitVersion"
     androidMockk              = "io.mockk:mockk-android:$mockkVersion"
     androidCoreTest           = "androidx.test:core:$androidCoreTestVersion"
+    espressoCore              = "androidx.test.espresso:espresso-core:$androidxTestEspressoVersion"
+    espressoContrib           = "androidx.test.espresso:espresso-contrib:$androidxTestEspressoVersion"
+    espressoIntents           = "androidx.test.espresso:espresso-intents:$androidxTestEspressoVersion"
+    androidxFragmentTesting   = "androidx.fragment:fragment-testing:$fragmentVersion"
+    androidxFragment          = "androidx.fragment:fragment:$fragmentVersion"
 
     //testImplementation libs
     junit                     = "junit:junit:$junitVersion"

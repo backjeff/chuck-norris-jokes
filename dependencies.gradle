@@ -19,6 +19,34 @@ ext {
             [configuration: "implementation", dependency: "$anko"]
     ]
 
+    baseDependencies = commonsDependencies + [
+            [configuration: "implementation", dependency: "$appCompat"],
+            [configuration: "implementation", dependency: "$viewModelRuntime"],
+            [configuration: "implementation", dependency: "$navigationUi"],
+            [configuration: "implementation", dependency: "$koinViewModel"],
+            [configuration: "implementation", dependency: "$navigationFragment"],
+            [configuration: "implementation", dependency: "$constraintLayout"],
+            [configuration: "implementation", dependency: "$material"],
+            [configuration: "implementation", dependency: "$anko"],
+            [configuration: "implementation", dependency: "$viewModel"],
+            [configuration: "implementation", dependency: "$lifecycleXt"],
+            [configuration: "implementation", dependency: "$liveData"]
+    ]
+
+    featureDependencies = commonsDependencies + [
+            [configuration: "implementation", dependency: "$koinViewModel"],
+            [configuration: "implementation", dependency: "$appCompat"],
+            [configuration: "implementation", dependency: "$viewModel"],
+            [configuration: "implementation", dependency: "$viewModelRuntime"],
+            [configuration: "implementation", dependency: "$lifecycleXt"],
+            [configuration: "implementation", dependency: "$liveData"],
+            [configuration: "implementation", dependency: "$navigationUi"],
+            [configuration: "implementation", dependency: "$navigationFragment"],
+            [configuration: "implementation", dependency: "$constraintLayout"],
+            [configuration: "implementation", dependency: "$material"],
+            [configuration: "implementation", dependency: "$anko"]
+    ]
+
     intentDependencies = appDependencies + [
             [configuration: "implementation", dependency: "$navigationFragment"],
             [configuration: "implementation", dependency: "$navigationUi"]
@@ -33,15 +61,6 @@ ext {
             [configuration: "implementation", dependency: "$retrofitCoroutine"],
             [configuration: "implementation", dependency: "$httpInterceptor"],
             [configuration: "implementation", dependency: "$gsonConvertFacotory"]
-    ]
-
-    presentationDependencies = commonsDependencies + [
-            [configuration: "implementation", dependency: "$koinViewModel"],
-            [configuration: "implementation", dependency: "$appCompat"],
-            [configuration: "implementation", dependency: "$viewModel"],
-            [configuration: "implementation", dependency: "$viewModelRuntime"],
-            [configuration: "implementation", dependency: "$lifecycleXt"],
-            [configuration: "implementation", dependency: "$liveData"]
     ]
 
     domainDependencies = commonsDependencies + [

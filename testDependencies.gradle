@@ -1,9 +1,12 @@
 ext {
     testCommonsDependencies = [
             [configuration: "testImplementation", dependency: "$junit"],
+            [configuration: "testImplementation", dependency: "$mockk"],
             [configuration: "testImplementation", dependency: "$mockitoKotlin"],
             [configuration: "testImplementation", dependency: "$kotlinJunit"],
-            [configuration: "testImplementation", dependency: "$koinTest"]
+            [configuration: "testImplementation", dependency: "$koinTest"],
+            [configuration: "testImplementation", dependency: "$coreTesting"]
+
     ]
 
     androidTestCommonsDependencies = testCommonsDependencies + [
@@ -18,9 +21,17 @@ ext {
 
     ]
 
-    testPresentationDependencies = testCommonsDependencies + [
-            [configuration: "testImplementation", dependency: "$coreTesting"],
-            [configuration: "testImplementation", dependency: "$mockk"]
+    testBaseDependencies = testCommonsDependencies + [
+
+    ]
+
+    testFeatureDependencies = androidTestCommonsDependencies + [
+            [configuration: "androidTestImplementation", dependency: "$espressoCore"],
+            [configuration: "androidTestImplementation", dependency: "$espressoContrib"],
+            [configuration: "androidTestImplementation", dependency: "$espressoIntents"],
+            [configuration: "androidTestImplementation", dependency: "$androidxFragmentTesting"],
+            [configuration: "androidTestImplementation", dependency: "$androidxFragment"],
+            [configuration: "androidTestImplementation", dependency: "$mockitoKotlin"]
     ]
 
     testIntentDependencies = testCommonsDependencies + [

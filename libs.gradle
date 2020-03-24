@@ -21,7 +21,7 @@ ext {
     navigationVersion          = "2.1.0"
 
     //androidx lifecycle
-    lifecycleVersion           = "2.2.0-alpha01"
+    lifecycleVersion           = "2.2.0"
 
     //koin
     koinVersion                = "2.0.1"
