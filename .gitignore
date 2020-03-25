@@ -1,11 +1,6 @@
-*.iml
-.gradle
-local.properties
 .idea/*
-.DS_Store
 build
 captures
-.externalNativeBuild
 .cxx
 
 
@@ -232,3 +227,5 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.gitignore.io/api/kotlin,android,androidstudio
+/chuck-norris-jokes.keystore
+/private_key.pepk
