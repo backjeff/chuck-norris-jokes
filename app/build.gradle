@@ -8,7 +8,6 @@ android.buildTypes.release.shrinkResources = true
 dependencies {
     implementation project(':di')
     implementation project(':intent')
-    implementation project(':base')
 
     appDependencies.each { add(it.configuration, it.dependency, it.options) }
 }

@@ -8,6 +8,5 @@ dependencies {
     api project(':base')
 
     featureDependencies.each { add(it.configuration, it.dependency, it.options) }
-
     testFeatureDependencies.each { add(it.configuration, it.dependency, it.options) }
 }

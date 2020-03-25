@@ -6,9 +6,7 @@ apply from: "$rootProject.projectDir/android-common.gradle"
 
 dependencies {
     api project(':base')
-
     api project(':feature_random_joke')
 
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     intentDependencies.each { add(it.configuration, it.dependency, it.options) }
 }

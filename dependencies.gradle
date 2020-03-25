@@ -49,7 +49,8 @@ ext {
 
     intentDependencies = appDependencies + [
             [configuration: "implementation", dependency: "$navigationFragment"],
-            [configuration: "implementation", dependency: "$navigationUi"]
+            [configuration: "implementation", dependency: "$navigationUi"],
+            [configuration: "implementation", dependency: "$legacySupport"]
     ]
 
     diDependencies = commonsDependencies + [

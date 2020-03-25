@@ -8,6 +8,5 @@ dependencies {
     api project(':domain')
 
     baseDependencies.each { add(it.configuration, it.dependency, it.options) }
-
     testBaseDependencies.each { add(it.configuration, it.dependency, it.options) }
 }
