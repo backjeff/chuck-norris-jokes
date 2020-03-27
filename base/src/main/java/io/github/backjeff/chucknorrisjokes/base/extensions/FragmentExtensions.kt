@@ -36,7 +36,7 @@ fun Fragment.setToolbarTitle(title: String) {
 }
 
 fun Fragment.setNavigationIcon(id: Int?) {
-    (activity as AppCompatActivity?)?.supportActionBar?.apply {
+    (activity as? AppCompatActivity?)?.supportActionBar?.apply {
         id?.let { setHomeAsUpIndicator(it) }
         setDisplayHomeAsUpEnabled(id != null)
     }
