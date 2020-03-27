@@ -10,6 +10,7 @@ dependencies {
     implementation project(':intent')
 
     appDependencies.each { add(it.configuration, it.dependency, it.options) }
+    testAppDependencies.each { add(it.configuration, it.dependency, it.options) }
 }
 
 androidExtensions {

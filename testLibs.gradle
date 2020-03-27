@@ -1,43 +1,56 @@
 ext {
 
-    //version
-    mockitoKotlinVersion      = "2.0.0"
-    junitVersion              = "4.12"
-    androidJunitVersion       = "1.1.0"
-    robolectricVersion        = "3.4.2"
+//    version
+    junitVersion                = "4.12"
+    espressoVersion             = "3.1.0"
+    coreTestVersion             = "1.2.0"
+    mockitoVersion              = "3.3.3"
+    androidJunitVersion         = "1.1.1"
+    fragmentVersion             = "1.2.0"
+    testRulesVersion            = "1.1.0"
+    mockkVersion                = "1.9.3"
+    dexMakerVersion             = "2.12.1"
 
-    androidTestRulesVersion   = "1.1.0"
-    androidTestVersion        = "1.2.0"
-    coreTestVersion           = "2.0.0"
-    mockkVersion              = "1.9.3"
-    androidJunitVersion       = "1.1.0"
-    androidCoreTestVersion    = "1.2.0"
+//    androidTestImplementation libs
+    testRules               = "androidx.test:rules:$testRulesVersion"
 
-    androidxTestEspressoVersion    = "3.1.0"
-    fragmentVersion    = "1.1.0"
+    espressoCore            = "androidx.test.espresso:espresso-core:$espressoVersion"
 
-    //androidTestImplementation libs
-    androidTestRules          = "androidx.test:rules:$androidTestRulesVersion"
-    androidJunit              = "androidx.test.ext:junit:$androidJunitVersion"
-    androidTestRunner         = "androidx.test:runner:$androidTestVersion"
+    testExtJunit            = "androidx.test.ext:junit:$androidJunitVersion"
+    testExtJunitKtx         = "androidx.test.ext:junit-ktx:$androidJunitVersion"
 
-    androidJunit              = "de.mannodermaus.junit5:android-test-core:$androidJunitVersion"
-    androidJunitRunner        = "de.mannodermaus.junit5:android-test-runner:$androidJunitVersion"
-    androidMockk              = "io.mockk:mockk-android:$mockkVersion"
-    androidCoreTest           = "androidx.test:core:$androidCoreTestVersion"
-    espressoCore              = "androidx.test.espresso:espresso-core:$androidxTestEspressoVersion"
-    espressoContrib           = "androidx.test.espresso:espresso-contrib:$androidxTestEspressoVersion"
-    espressoIntents           = "androidx.test.espresso:espresso-intents:$androidxTestEspressoVersion"
-    androidxFragmentTesting   = "androidx.fragment:fragment-testing:$fragmentVersion"
-    androidxFragment          = "androidx.fragment:fragment:$fragmentVersion"
+    fragment                = "androidx.fragment:fragment:$fragmentVersion"
+    fragmentTesting         = "androidx.fragment:fragment-testing:$fragmentVersion"
+    mockitoAndroid          = "org.mockito:mockito-android:$mockitoVersion"
+    mockkAndroid            = "io.mockk:mockk-android:$mockkVersion"
+    dexmaker                = "com.linkedin.dexmaker:dexmaker-mockito:$dexMakerVersion"
 
-    //testImplementation libs
-    junit                     = "junit:junit:$junitVersion"
-    kotlinTest                = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    kotlinJunit               = "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
-    mockitoKotlin             = "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
-    koinTest                  = "org.koin:koin-test:$koinVersion"
-    coreTesting               = "androidx.arch.core:core-testing:$coreTestVersion"
-    robolectric               = "org.robolectric:robolectric:$robolectricVersion"
-    mockk                     = "io.mockk:mockk:$mockkVersion"
+//    testImplementation libs
+    junit                   = "junit:junit:$junitVersion"
+    coreTest                = "androidx.test:core:$coreTestVersion"
+    mockitoCore             = "org.mockito:mockito-core:$mockitoVersion"
+    mockk                   = "io.mockk:mockk:$mockkVersion"
+
+
+
+
+
+//    androidTestImplementation libs
+//    androidTestRunner         = "androidx.test:runner:$androidTestVersion"
+//    androidJunit              = "de.mannodermaus.junit5:android-test-core:$androidJunitVersion"
+//    androidJunitRunner        = "de.mannodermaus.junit5:android-test-runner:$androidJunitVersion"
+//    espressoContrib           = "androidx.test.espresso:espresso-contrib:$androidxTestEspressoVersion"
+//    espressoIntents           = "androidx.test.espresso:espresso-intents:$androidxTestEspressoVersion"
+//
+//    testImplementation libs
+//    kotlinTest                = "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+//    kotlinJunit               = "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
+//    mockitoKotlin             = "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+//    koinTest                  = "org.koin:koin-test:$koinVersion"
+//    coreTesting               = "androidx.arch.core:core-testing:$coreTestVersion"
+//    robolectric               = "org.robolectric:robolectric:$robolectricVersion"
+
+
+
+
 }

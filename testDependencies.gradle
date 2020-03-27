@@ -1,23 +1,31 @@
 ext {
     testCommonsDependencies = [
             [configuration: "testImplementation", dependency: "$junit"],
+            [configuration: "testImplementation", dependency: "$coreTest"],
+//            [configuration: "testImplementation", dependency: "$mockitoCore"],
             [configuration: "testImplementation", dependency: "$mockk"],
-            [configuration: "testImplementation", dependency: "$mockitoKotlin"],
-            [configuration: "testImplementation", dependency: "$kotlinJunit"],
-            [configuration: "testImplementation", dependency: "$koinTest"],
-            [configuration: "testImplementation", dependency: "$coreTesting"]
 
     ]
 
     androidTestCommonsDependencies = testCommonsDependencies + [
-            [configuration: "androidTestRuntimeOnly", dependency: "$androidJunitRunner"],
-            [configuration: "androidTestImplementation", dependency: "$androidMockk"],
-            [configuration: "androidTestImplementation", dependency: "$androidJunit"],
-            [configuration: "androidTestImplementation", dependency: "$androidTestRunner"],
-            [configuration: "androidTestImplementation", dependency: "$androidCoreTest"]
+            [configuration: "androidTestImplementation", dependency: "$coreTest"],
+            [configuration: "androidTestImplementation", dependency: "$testRules"],
+
+            [configuration: "androidTestImplementation", dependency: "$espressoCore"],
+
+            [configuration: "androidTestImplementation", dependency: "$testExtJunit"],
+            [configuration: "androidTestImplementation", dependency: "$testExtJunitKtx"],
+
+            [configuration: "debugImplementation", dependency: "$fragmentTesting"],
+            [configuration: "implementation", dependency: "$fragment"],
+
+            [configuration: "androidTestImplementation", dependency: "$dexmaker"],
+//            [configuration: "androidTestImplementation", dependency: "$mockitoAndroid"], // replaced by dexmaker
+            [configuration: "androidTestImplementation", dependency: "$mockkAndroid"],
+
     ]
 
-    testAppDependencies = testCommonsDependencies + [
+    testAppDependencies = androidTestCommonsDependencies + [
 
     ]
 
@@ -26,12 +34,7 @@ ext {
     ]
 
     testFeatureDependencies = androidTestCommonsDependencies + [
-            [configuration: "androidTestImplementation", dependency: "$espressoCore"],
-            [configuration: "androidTestImplementation", dependency: "$espressoContrib"],
-            [configuration: "androidTestImplementation", dependency: "$espressoIntents"],
-            [configuration: "androidTestImplementation", dependency: "$androidxFragmentTesting"],
-            [configuration: "androidTestImplementation", dependency: "$androidxFragment"],
-            [configuration: "androidTestImplementation", dependency: "$mockitoKotlin"]
+
     ]
 
     testIntentDependencies = testCommonsDependencies + [
