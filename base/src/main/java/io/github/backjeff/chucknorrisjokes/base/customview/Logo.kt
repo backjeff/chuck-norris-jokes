@@ -23,7 +23,7 @@ class Logo @JvmOverloads constructor(
     }
 
     fun blink(sound: Boolean = true, action: () -> Unit = {}) {
-        CoroutineScope(Dispatchers.IO).launch() {
+        CoroutineScope(Dispatchers.Main).launch() {
             delay(500)
             setImageResource(R.drawable.logo_blink)
             playSound(sound)
