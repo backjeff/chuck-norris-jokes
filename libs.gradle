@@ -7,8 +7,8 @@ ext {
     androidCompileSdkVersion   = 29
     androidMinSdkVersion       = 22
     androidTargetSdkVersion    = 29
-    androidVersionCode         = 1
-    androidVersionName         = "1.0"
+    androidVersionCode         = 2
+    androidVersionName         = "1.0.1"
 
     //kotlin
     coroutineVersion           = "1.3.3"
@@ -37,6 +37,10 @@ ext {
     gsonVersion                = "2.8.5"
 
     materialVersion            = "1.0.0"
+
+    firebaseAnalyticsVersion   = "17.3.0"
+    firebaseCrashlyticsVersion = "17.0.0-beta03"
+    jacocoVersion              = "0.8.4"
 
 
 
@@ -78,5 +82,9 @@ ext {
     gson                 = "com.google.code.gson:gson:$gsonVersion"
 
     material             = "com.google.android.material:material:$materialVersion"
+
+    firebaseAnalytics    = "com.google.firebase:firebase-analytics:$firebaseAnalyticsVersion"
+    firebaseCrashlytics  = "com.google.firebase:firebase-crashlytics:$firebaseCrashlyticsVersion"
+    jacoco               = "org.jacoco:org.jacoco.core:$jacocoVersion"
 
 }

@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "230358263378",
+    "firebase_url": "https://backjeff-chucknorrisjokes.firebaseio.com",
+    "project_id": "backjeff-chucknorrisjokes",
+    "storage_bucket": "backjeff-chucknorrisjokes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230358263378:android:a328c04f04c7df4782e18b",
+        "android_client_info": {
+          "package_name": "io.github.backjeff.chucknorrisjokes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230358263378-m7q3uvs9r4ul4lg1321b97rd2hu6fui8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsVsMGNNBGApCGbOQtIqB7fnnZQ_eYtks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230358263378-m7q3uvs9r4ul4lg1321b97rd2hu6fui8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-5841243562301139~7928171612"
+    }
+  ],
+  "configuration_version": "1"
+}
