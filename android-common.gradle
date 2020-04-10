@@ -9,6 +9,7 @@ android {
         versionName androidVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "io.github.backjeff.chucknorrisjokes.feature_random_joke.TestAppJUnitRunner"
     }
 
     buildTypes {

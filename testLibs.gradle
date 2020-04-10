@@ -10,6 +10,7 @@ ext {
     testRulesVersion            = "1.1.0"
     mockkVersion                = "1.9.3"
     dexMakerVersion             = "2.12.1"
+    mockitoKotlinVersion        = "2.2.0"
 
 //    androidTestImplementation libs
     testRules               = "androidx.test:rules:$testRulesVersion"
@@ -30,8 +31,9 @@ ext {
     coreTest                = "androidx.test:core:$coreTestVersion"
     mockitoCore             = "org.mockito:mockito-core:$mockitoVersion"
     mockk                   = "io.mockk:mockk:$mockkVersion"
+    koinTest                = "org.koin:koin-test:$koinVersion"
 
-
+    mockitoKotlin           = "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
 
 
 

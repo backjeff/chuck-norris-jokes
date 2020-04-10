@@ -4,7 +4,7 @@ ext {
             [configuration: "testImplementation", dependency: "$coreTest"],
 //            [configuration: "testImplementation", dependency: "$mockitoCore"],
             [configuration: "testImplementation", dependency: "$mockk"],
-
+            [configuration: "testImplementation", dependency: "$mockitoKotlin"],
     ]
 
     androidTestCommonsDependencies = testCommonsDependencies + [
@@ -22,7 +22,7 @@ ext {
             [configuration: "androidTestImplementation", dependency: "$dexmaker"],
 //            [configuration: "androidTestImplementation", dependency: "$mockitoAndroid"], // replaced by dexmaker
             [configuration: "androidTestImplementation", dependency: "$mockkAndroid"],
-
+            [configuration: "androidTestImplementation", dependency: "$koinTest", options: { exclude group: 'org.mockito' }],
     ]
 
     testAppDependencies = androidTestCommonsDependencies + [
