@@ -18,7 +18,9 @@ ext {
             [configuration: "implementation", dependency: "$material"],
             [configuration: "implementation", dependency: "$anko"],
             [configuration: "implementation", dependency: "$firebaseAnalytics"],
-            [configuration: "implementation", dependency: "$firebaseCrashlytics"]
+            [configuration: "implementation", dependency: "$firebaseCrashlytics"],
+            [configuration: "implementation", dependency: "$playCore"],
+            [configuration: "implementation", dependency: "$playCoreKtx"]
     ]
 
     baseDependencies = commonsDependencies + [

@@ -7,8 +7,8 @@ ext {
     androidCompileSdkVersion   = 29
     androidMinSdkVersion       = 22
     androidTargetSdkVersion    = 29
-    androidVersionCode         = 2
-    androidVersionName         = "1.0.1"
+    androidVersionCode         = 10
+    androidVersionName         = "1.0.0"
 
     //kotlin
     coroutineVersion           = "1.3.3"
@@ -86,5 +86,8 @@ ext {
     firebaseAnalytics    = "com.google.firebase:firebase-analytics:$firebaseAnalyticsVersion"
     firebaseCrashlytics  = "com.google.firebase:firebase-crashlytics:$firebaseCrashlyticsVersion"
     jacoco               = "org.jacoco:org.jacoco.core:$jacocoVersion"
+
+    playCore             = "com.google.android.play:core:1.8.0"
+    playCoreKtx          = "com.google.android.play:core-ktx:1.8.0"
 
 }
